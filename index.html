@@ -10,14 +10,14 @@
 </head>
 
 <body>
-
   <nav class="navbar">
-    <a href="#" class="navbar__logo"><i class="ri-code-s-slash-line"></i> Personal Porfolio.</a>
+    <a href="#" class="navbar__logo"><i class="ri-code-s-slash-line"></i> Personal Portfolio.</a>
     <div class="navbar__menu">
       <a href="#" class="navbar__link">Thanks</a>
       <a href="#" class="navbar__link">For</a>
       <a href="#" class="navbar__link">Stopping</a>
       <a href="#" class="navbar__link">By !</a>
+      <button id="theme-toggle" class="btn btn--secondary">Toggle Dark Mode</button>
     </div>
   </nav>
 
@@ -28,7 +28,7 @@
     </div>
 
     <div class="hero__intro">
-      <h3>Cyber Security  & IT Support Specialist, USA</h3>
+      <h3>Cyber Security & IT Support Specialist, USA</h3>
       <p>Crafting intuitive and high-performance security interfaces for digital solutions.</p>
       <div class="hero__actions">
         <button class="btn">View My Credentials</button>
@@ -55,63 +55,57 @@
         </div>
 
         <div class="category__projects">
+          <!-- Security+ -->
+          <div class="project-card">
+            <img src="Certs/security%2B.png" alt="Security+ Certificate" class="project-card__image">
+            <div class="project-card__info">
+              <h5>Security +</h5>
+              <p>Earned Feb 2025</p>
+            </div>
+            <p class="project-card__desc">Validates baseline cybersecurity skills.</p>
+            <a href="https://www.credly.com/badges/650e9814-5b3c-4ac1-ae5e-7bdd7f74d59c/public_url" target="_blank">
+              <button class="btn">Verify Credential</button>
+            </a>
+          </div>
 
-  <!-- Security+ -->
-<div class="project-card">
-  <img src="Certs/security%2B.png" alt="Security+ Certificate" class="project-card__image">
-  <div class="project-card__info">
-    <h5>Security +</h5>
-    <p>Earned Feb 2025</p>
-  </div>
-  <p class="project-card__desc">Validates baseline cybersecurity skills.</p>
-  <a href="https://www.credly.com/badges/650e9814-5b3c-4ac1-ae5e-7bdd7f74d59c/public_url" target="_blank">
-    <button class="btn">Verify Credential</button>
-  </a>
-</div>
+          <!-- Google Cybersecurity -->
+          <div class="project-card">
+            <img src="Certs/Gsecurity.pdf" alt="Gsecurity Certificate" class="project-card__image">
+            <div class="project-card__info">
+              <h5>Google Cybersecurity</h5>
+              <p>Earned May 2025</p>
+            </div>
+            <p class="project-card__desc">Google's cybersecurity standards.</p>
+            <a href="https://coursera-certificate-images.s3.amazonaws.com/99BJK8G9E90D" target="_blank">
+              <button class="btn">Verify Credential</button>
+            </a>
+          </div>
 
-  <!-- Google Cybersecurity -->
-<div class="project-card">
-  <img src="Certs/Gsecurity.pdf" alt="Gsecurity Certificate" class="project-card__image">
-  <div class="project-card__info">
-    <h5>Google Cybersecurity</h5>
-    <p>Earned May 2025</p>
-  </div>
-  <p class="project-card__desc">Google's cybersecurity standards.</p>
-  <a href="https://coursera-certificate-images.s3.amazonaws.com/99BJK8G9E90D" target="_blank">
-    <button class="btn">Verify Credential</button>
-  </a>
-</div>
+          <!-- Google IT Support -->
+          <div class="project-card">
+            <img src="Certs/google" alt="Google IT Support Certificate" class="project-card__image">
+            <div class="project-card__info">
+              <h5>Google IT Support</h5>
+              <p>Earned May 28, 2025</p>
+            </div>
+            <p class="project-card__desc">Technical support fundamentals from Google.</p>
+            <a href="https://coursera-certificate-images.s3.amazonaws.com/MBLHI3EE5C4G" target="_blank">
+              <button class="btn">Verify Credential</button>
+            </a>
+          </div>
 
-
-
-<!-- Google IT Support -->
-<div class="project-card">
-  <img src="Certs/google" alt="Google IT Support Certificate" class="project-card__image">
-  <div class="project-card__info">
-    <h5>Google IT Support</h5>
-    <p>Earned May 28, 2025</p>
-  </div>
-  <p class="project-card__desc">Technical support fundamentals from Google.</p>
-  <a href="https://coursera-certificate-images.s3.amazonaws.com/MBLHI3EE5C4G" target="_blank">
-    <button class="btn">Verify Credential</button>
-  </a>
-</div>
-
-<!-- Cisco IT Support -->
-<div class="project-card">
-  <img src="Certs/ITCustomerSupportBasicCisco.png" alt="Cisco IT Support Certificate" class="project-card__image">
-  <div class="project-card__info">
-    <h5>Cisco IT Support Basics</h5>
-    <p>Issued 2025</p>
-  </div>
-  <p class="project-card__desc">Covers foundational support and network skills.</p>
-  <a href="https://www.credly.com/badges/b3ad6870-9c3a-4dd8-83af-938e9a17d919/public_url" target="_blank">
-    <button class="btn">Verify Credential</button>
-  </a>
-</div>
-
-
-
+          <!-- Cisco IT Support -->
+          <div class="project-card">
+            <img src="Certs/ITCustomerSupportBasicCisco.png" alt="Cisco IT Support Certificate" class="project-card__image">
+            <div class="project-card__info">
+              <h5>Cisco IT Support Basics</h5>
+              <p>Issued 2025</p>
+            </div>
+            <p class="project-card__desc">Covers foundational support and network skills.</p>
+            <a href="https://www.credly.com/badges/b3ad6870-9c3a-4dd8-83af-938e9a17d919/public_url" target="_blank">
+              <button class="btn">Verify Credential</button>
+            </a>
+          </div>
         </div>
       </section>
     </div>
@@ -191,6 +185,25 @@
     </div>
   </footer>
 
+  <script>
+    // Load saved theme or system preference
+    if (localStorage.getItem('theme') === 'dark' || 
+        (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark-mode');
+    }
+
+    const toggleButton = document.getElementById('theme-toggle');
+    toggleButton.textContent = document.documentElement.classList.contains('dark-mode')
+        ? 'Switch to Light Mode'
+        : 'Toggle Dark Mode';
+
+    toggleButton.addEventListener('click', () => {
+        document.documentElement.classList.toggle('dark-mode');
+        const isDark = document.documentElement.classList.contains('dark-mode');
+        toggleButton.textContent = isDark ? 'Switch to Light Mode' : 'Toggle Dark Mode';
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    });
+  </script>
 </body>
 
 </html>
